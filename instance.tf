@@ -33,8 +33,8 @@ resource "google_compute_instance_from_template" "instance" {
   project = "${var.project}"
   
   # DEBUG: Initial pass use first line, to recreate bug, use second line
-  #count   = "2"
-  count   = "3"
+  count   = "2"
+  #count   = "3"
 
   # Use the template for most parameters
   source_instance_template = "${google_compute_instance_template.default.self_link}"
@@ -52,8 +52,8 @@ resource "google_compute_instance_group" "group" {
   zone = "${element(data.google_compute_zones.available.names, count.index)}"
 
   # DEBUG: Initial pass use first line, to recreate bug, use second line
-  #description = "INITIAL: Instance group ${count.index}"
-  description = "CHANGED: Instance group ${count.index}"
+  description = "INITIAL: Instance group ${count.index}"
+  #description = "CHANGED: Instance group ${count.index}"
 
   instances = [
     "${matchkeys(concat(google_compute_instance_from_template.instance.*.self_link),
