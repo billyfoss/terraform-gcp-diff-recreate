@@ -18,7 +18,6 @@
 
 Terraform v0.11.11
 + provider.google v1.20.0
-+ provider.template v2.0.0
 
 ### Affected Resource(s)
 
