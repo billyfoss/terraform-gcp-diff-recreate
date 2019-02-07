@@ -1,0 +1,17 @@
+
+# Variables for the recreating Terraform issue
+
+# Credentials
+gce_json = "terraform-bug-project-1234-5670abcdef.json"
+
+# Project
+gce_project = "terraform-bug-project-1234"
+
+# Region
+gce_region = "us-east1"
+
+# VPC Network
+vpc_network = "default"
+
+# Subnetwork
+subnetwork = "default"
